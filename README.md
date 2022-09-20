@@ -1,2 +1,3 @@
 # portfolioPage
- Portfolio page with Python and Streamlit
+# :computer: Página de portfólio
+# :wrench Python | :books: streamlit ; streamlit-lottie
