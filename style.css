@@ -1,0 +1,65 @@
+/* Título da page e efeito de glow */
+
+#oi-meu-nome-heitor-fidelis {
+    font-size: 55px;
+    color: #fff;
+    text-align: left;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #2f9978, 0 0 6px #2f9978, 0 0 10px #2f9978, 0 0 15px #2f9978, 0 0 28px #2f9978;
+  }
+  
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 4px #1ed69c, 0 0 6px #1ed69c, 0 0 10px #1ed69c, 0 0 15px #1ed69c, 0 0 25px #1ed69c, 0 0 28px #1ed69c;
+  }
+}
+
+/* CSS do formulário de contato */ 
+
+input[type=message], input[type=email], input[type=text], textarea {
+    background-color: black;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #55edbd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /* Alterar tamanho da área de texto verticalmente */
+    color: #fff
+  }
+  
+  input[type=message]:hover, input[type=email]:hover, input[type=text]:hover, textarea:hover {
+    box-shadow: 1px 1px 8px #55edbd, 1px 1px 8px #55edbd;
+    border: 1px solid #55edbd;
+  }
+  
+  /* Botão de envio do formulário */
+
+  button[type=submit] {
+    background: black;
+    box-sizing: border-box;
+    text-align: center;
+    color: aliceblue;
+    padding: 12px 20px;
+    border: 2px solid #55edbd;
+    border-radius: 0.6rem;
+    cursor: pointer;
+  }
+
+  button[type=submit]:hover {
+    color: #55edbd;
+    box-shadow: 3px 3px 20px #55edbd,
+    3px 2px 20px #55edbd;
+    border: 2px solid #55edbd
+  }
+  
+  
+  /* Remover a marca d'água do streamlit */
+
+  #MainMenu {visibility: hidden;}
+  footer {visibility: hidden;}
+  header {visibility: hidden;}
