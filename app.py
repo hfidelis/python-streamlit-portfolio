@@ -2,21 +2,26 @@ from cgitb import text
 import streamlit as st
 import json
 from streamlit_lottie import st_lottie
+import requests
 
 # from PIL import Image \ Importar imagens
 # var = Image.open('diretório')
 # st.image(var)
 
-# Função p/ request de animação local
+# Função p/ request de animação json
 
-def load_lottiefile(filepath: str):
-    with open(filepath, "r") as f:
-        return json.load(f)
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
 
 # Animações
 
-lottieAnimation1 = load_lottiefile('C:\\Users\\heito\\OneDrive\\Área de Trabalho\\VSCode\\portfolioPage\\visualFiles\Anim1.json')
-lottieAnimation2 = load_lottiefile('C:\\Users\\heito\\OneDrive\\Área de Trabalho\\VSCode\\portfolioPage\\visualFiles\Anim2.json')
+lottieAnimation1 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_0jQBogOQOn.json")
+lottieAnimation2 = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_pghdouhq.json")
 
 st.set_page_config(page_title='Meu Projeto', page_icon=':mortar_board:', layout='wide')
 
